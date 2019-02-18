@@ -1,3 +1,4 @@
+from builtins import object
 from django.conf import settings
 from django.db import models
 
@@ -14,7 +15,7 @@ DEFAULT_SINGLETON_INSTANCE_ID = 1
 class SingletonModel(models.Model):
     singleton_instance_id = DEFAULT_SINGLETON_INSTANCE_ID
 
-    class Meta:
+    class Meta(object):
         abstract = True
 
     def save(self, *args, **kwargs):

@@ -1,3 +1,4 @@
+from builtins import str
 from django.conf.urls import url
 from django.contrib import admin
 from django.http import HttpResponseRedirect
